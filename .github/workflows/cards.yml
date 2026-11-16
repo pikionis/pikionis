@@ -1,4 +1,4 @@
-name: Refresh README cards
+name: Refresh README
 
 on:
   schedule:
@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: ["scripts/**", "fonts/**", "data/logo.json"]
+    paths: ["scripts/**", "fonts/**", "data/logo.json", "data/profile.json"]
 
 permissions:
   contents: write
@@ -21,12 +21,16 @@ jobs:
           python-version: "3.12"
       - name: Fetch the contribution calendar
         run: python scripts/fetch_contributions.py pikionis
+      - name: Fetch my repositories and the projects on onehublabs.com
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/fetch_work.py pikionis
       - name: Render README cards (hero, tiles, graph, activity, repos)
         run: python scripts/render_readme_cards.py
       - name: Commit the cards if they changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add cards data/contributions.json
-          git diff --cached --quiet || git commit -m "Refresh README cards"
+          git add -A cards data README.md
+          git diff --cached --quiet || git commit -m "Refresh README"
           git push

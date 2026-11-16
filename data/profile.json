@@ -1,0 +1,36 @@
+{
+  "_readme": "The one file to edit by hand. Everything else in the README is fetched: repos from GitHub, projects from the onehublabs repo.",
+  "what_i_do": [
+    "I build AI-backed software for e-commerce and product data: feed pipelines, AI field mapping and translation, marketplace integrations, and the web applications around them. Most recently I was the engineer behind supplier feeds and marketplace integrations at DeinDeal, a Swiss marketplace, where the pipeline I built translated 800,000+ products into four languages."
+  ],
+  "skills": [
+    ["AI agents", "agentic workflows that plan, call tools and act: a site monitor whose agent opens pull requests with fixes, AI field mapping that leaves a field empty when it is unsure."],
+    ["AI systems", "model gateways with routing, retries, a circuit breaker and cost tracking; evals for mapping quality; embeddings with pgvector."],
+    ["Automation", "scheduled pipelines, scrapers, supplier feed sync over CSV, XML, FTP and SFTP, automated reporting, GitHub Actions."],
+    ["Front end", "React, Astro, TypeScript, Tailwind, GSAP scroll and SVG animation, design systems, three-language sites."],
+    ["Back end and data", "Laravel, PostgreSQL, queues, category matching, translation memory."]
+  ],
+  "featured_count": 4,
+  "exclude_repos": ["pikionis", "practise", "survey", "van-life", "diploma", "reach20112018", "real-world-vue"],
+  "site_repo": "pikionis/onehublabs",
+  "repo_overrides": {
+    "feedgenix.com": {
+      "language": "PHP · TypeScript",
+      "description": "AI feed intelligence for e-commerce catalogues: AI field mapping, a translation engine, and an AI gateway with routing, retries and a circuit breaker. Mapping evals included.",
+      "tags": ["Laravel 13", "React 19", "pgvector", "Evals", "32 ADRs"]
+    },
+    "onehublabs": {
+      "language": "Astro · TypeScript",
+      "description": "onehublabs.com, my own site. Astro and GSAP, three languages, a scroll-told career story, and a GitHub terrain built from my contributions.",
+      "tags": ["Astro 5", "GSAP", "EN · EL · DE"]
+    },
+    "arogikos": {
+      "description": "Website for a learning-support centre in Kos. Server-rendered Laravel and Blade, its own design system, self-hosted fonts, GDPR-friendly.",
+      "tags": ["Laravel 13", "Blade", "Tailwind 4"]
+    },
+    "ourbnb": {
+      "description": "ourbnb.gr: short-term rental management in Kos for Airbnb, Booking.com and Expedia. A static site with no build step and no database.",
+      "tags": ["Static", "No build", "SEO"]
+    }
+  }
+}

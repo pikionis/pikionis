@@ -13,6 +13,7 @@ import base64
 import datetime as dt
 import json
 import os
+import re
 from html import escape
 from pathlib import Path
 
@@ -31,30 +32,32 @@ ROLE = "AI Software Engineer"
 MOTTO = ["Design.", "Build.", "Automate.", "Scale fast."]
 LINE_ABOUT = "I turn ideas into working software."
 
+PROFILE = json.loads((ROOT / "data" / "profile.json").read_text())
+WORK = json.loads((ROOT / "data" / "work.json").read_text())
+
 TILES = [  # value, suffix, label (two lines), ground, text, accent
-    ("projects", 9, "", ["Projects designed,", "built and shipped"], COBALT, IVORY, IVORY),
+    ("projects", len(WORK["projects"]) or 9, "", ["Projects designed,", "built and shipped"], COBALT, IVORY, IVORY),
     ("scale", 800, "K+", ["Products processed", "daily with AI"], GROUND, IVORY, "#6f8cf0"),
     ("years", 9, "+", ["Years designing", "and shipping"], IVORY, INK, COBALT),
 ]
 
-REPOS = [  # file, name, language, colour, description, tags
-    ("feedgenix", "feedgenix.com", "PHP · TypeScript", "#2d49ad",
-     "AI feed intelligence for e-commerce catalogues: AI field mapping, a translation engine, "
-     "and an AI gateway with routing, retries and a circuit breaker. Mapping evals included.",
-     ["Laravel 13", "React 19", "pgvector", "Evals", "32 ADRs"]),
-    ("onehublabs", "onehublabs", "Astro · TypeScript", "#1f2020",
-     "onehublabs.com, my own site. Astro and GSAP, three languages, a scroll-told career "
-     "story, and a GitHub terrain built from my contributions.",
-     ["Astro 5", "GSAP", "EN · EL · DE"]),
-    ("arogikos", "arogikos", "PHP", "#2d49ad",
-     "Website for a learning-support centre in Kos. Server-rendered Laravel and Blade, "
-     "its own design system, self-hosted fonts, GDPR-friendly.",
-     ["Laravel 13", "Blade", "Tailwind 4"]),
-    ("ourbnb", "ourbnb", "HTML", "#1f2020",
-     "ourbnb.gr: short-term rental management in Kos for Airbnb, Booking.com and Expedia. "
-     "A static site with no build step and no database.",
-     ["Static", "No build", "SEO"]),
-]
+LANGUAGE_COLOURS = [COBALT, INK]
+
+
+def featured():
+    """The repos pushed to most recently, minus the ones data/profile.json rules out."""
+    picked = []
+    for item in WORK["repos"]:
+        if item["name"] in PROFILE["exclude_repos"]:
+            continue
+        over = PROFILE["repo_overrides"].get(item["name"], {})
+        description = over.get("description") or item["description"] or "A new repository. Its description is on the way."
+        tags = over.get("tags") or [t for t in item["topics"]][:4]
+        picked.append({"key": re.sub(r"[^a-z0-9]+", "-", item["name"].lower()).strip("-"), "name": item["name"],
+                       "language": over.get("language") or item["language"], "description": description,
+                       "tags": tags, "url": item["url"]})
+    return picked[:PROFILE["featured_count"]]
+
 
 
 # ── shared ──────────────────────────────────────────────────────────────────────────────
@@ -299,7 +302,9 @@ def graph(c):
     write("graph", svg(w, h, body, f'Contribution graph: {c["total"]} contributions in the last year'))
 
 
-def repo(key, name, language, colour, description, tags, order):
+def repo(item, order):
+    key, name, language, description, tags = (item[k] for k in ("key", "name", "language", "description", "tags"))
+    colour = LANGUAGE_COLOURS[order % 2]
     w, h = 414, 196
     start = 0.2 + order * 0.14
     lines = "".join(text(24, 76 + i * 19, s, 13.5, MUTED) for i, s in enumerate(wrap(description, 56)[:4]))
@@ -321,15 +326,40 @@ def repo(key, name, language, colour, description, tags, order):
     write(f"repo-{key}", svg(w, h, body, f"{name}: {description}"))
 
 
+def readme(repos):
+    """Rewrites the parts of README.md between its <!-- name:start --> and <!-- name:end --> marks."""
+    skills = "\n".join(f"- **{name}:** {line}" for name, line in PROFILE["skills"])
+    what = "\n\n".join(PROFILE["what_i_do"]) + "\n\n" + skills
+    cards = "\n".join(f'<a href="{r["url"]}"><img src="./cards/repo-{r["key"]}.svg" width="49.5%" '
+                      f'alt="{escape(r["name"] + ": " + r["description"])}" /></a>' for r in repos)
+    projects = "\n".join(
+        f'- **[{p["title"]}]({SITE}/projects/{p["slug"]})**' + (f' ({p["badge"]})' if p["badge"] else "")
+        + f': {p["summary"]}' + (f' <sub>{" · ".join(p["stack"])}</sub>' if p["stack"] else "")
+        for p in WORK["projects"])
+    count = len(WORK["projects"])
+    tiles_alt = f'{count} projects designed, built and shipped'
+    path = ROOT / "README.md"
+    text_ = path.read_text(encoding="utf-8")
+    for name, block in (("what", what), ("repos", cards), ("projects", projects)):
+        text_ = re.sub(rf"(<!-- {name}:start -->).*?(<!-- {name}:end -->)",
+                       lambda m: f"{m[1]}\n{block}\n{m[2]}", text_, flags=re.S)
+    text_ = re.sub(r'alt="\d+ projects designed, built and shipped"', f'alt="{tiles_alt}"', text_)
+    path.write_text(text_, encoding="utf-8")
+
+
 def main():
     c = load()
+    repos = featured()
+    for old in OUT.glob("repo-*.svg"):
+        old.unlink()
     hero()
     for order, t in enumerate(TILES):
         tile(*t, order)
     graph(c)
     activity(c)
-    for order, r in enumerate(REPOS):
-        repo(*r, order)
+    for order, r in enumerate(repos):
+        repo(r, order)
+    readme(repos)
 
 
 if __name__ == "__main__":

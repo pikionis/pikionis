@@ -1,0 +1,146 @@
+{
+ "repos": [
+  {
+   "name": "feedgenix.com",
+   "description": "",
+   "language": "PHP",
+   "topics": [],
+   "pushed_at": "2026-11-15T21:56:28Z",
+   "url": "https://github.com/pikionis/feedgenix.com"
+  },
+  {
+   "name": "ourbnb",
+   "description": "",
+   "language": "HTML",
+   "topics": [],
+   "pushed_at": "2026-11-14T11:28:49Z",
+   "url": "https://github.com/pikionis/ourbnb"
+  },
+  {
+   "name": "onehublabs",
+   "description": "",
+   "language": "JavaScript",
+   "topics": [],
+   "pushed_at": "2026-11-13T11:28:25Z",
+   "url": "https://github.com/pikionis/onehublabs"
+  },
+  {
+   "name": "arogikos",
+   "description": "",
+   "language": "PHP",
+   "topics": [],
+   "pushed_at": "2026-11-13T09:18:13Z",
+   "url": "https://github.com/pikionis/arogikos"
+  }
+ ],
+ "projects": [
+  {
+   "slug": "arogi-kos",
+   "title": "Arogi Kos",
+   "summary": "Brand-led website, designed with Claude Design and AI-assisted build.",
+   "badge": "",
+   "stack": [
+    "Claude Design",
+    "Laravel",
+    "Tailwind CSS"
+   ],
+   "order": 1.0
+  },
+  {
+   "slug": "feedgenix",
+   "title": "FeedGenix",
+   "summary": "Product feeds for cross-border merchants: AI field mapping, in any language.",
+   "badge": "Private beta",
+   "stack": [
+    "Laravel",
+    "React",
+    "PostgreSQL",
+    "LLMs"
+   ],
+   "order": 1.0
+  },
+  {
+   "slug": "kalimera",
+   "title": "Kalimera",
+   "summary": "A travel platform in three parts: a travel guide, an online booking system and an affiliate network.",
+   "badge": "",
+   "stack": [
+    "Statamic",
+    "Laravel",
+    "Alpine.js",
+    "Tailwind CSS"
+   ],
+   "order": 1.0
+  },
+  {
+   "slug": "la-islakos",
+   "title": "La Islakos",
+   "summary": "Online store of La Isla, a boutique on Kos for clothes and accessories by Greek and European designers.",
+   "badge": "",
+   "stack": [
+    "PrestaShop"
+   ],
+   "order": 1.0
+  },
+  {
+   "slug": "arangia",
+   "title": "Arangia",
+   "summary": "Property brand site and the booking operation behind it, across Airbnb and Booking.com.",
+   "badge": "",
+   "stack": [
+    "React",
+    "Vite",
+    "Tailwind CSS"
+   ],
+   "order": 2.0
+  },
+  {
+   "slug": "deindeal",
+   "title": "DeinDeal",
+   "summary": "Marketplace engineering for a large Swiss online marketplace: small suppliers connected to major European marketplaces.",
+   "badge": "",
+   "stack": [
+    "LLMs",
+    "React",
+    "Channable"
+   ],
+   "order": 2.0
+  },
+  {
+   "slug": "delian-co",
+   "title": "Delian & Co.",
+   "summary": "Website of Delian & Co., an independent multi-family office in Zürich serving professional athletes.",
+   "badge": "",
+   "stack": [
+    "React",
+    "Vite",
+    "Tailwind CSS"
+   ],
+   "order": 2.0
+  },
+  {
+   "slug": "ourbnb",
+   "title": "OurBnb",
+   "summary": "Short-term rental management on Kos, and the platform that runs it.",
+   "badge": "",
+   "stack": [
+    "Python",
+    "Django",
+    "PostgreSQL",
+    "WhatsApp"
+   ],
+   "order": 2.0
+  },
+  {
+   "slug": "sunny-days",
+   "title": "Sunny Days",
+   "summary": "Website of Sunny Days, a family-run hotel on the beach of Tigaki, Kos.",
+   "badge": "",
+   "stack": [
+    "Statamic",
+    "Laravel"
+   ],
+   "order": 3.0
+  }
+ ]
+}

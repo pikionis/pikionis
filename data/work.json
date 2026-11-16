@@ -1,6 +1,14 @@
 {
  "repos": [
   {
+   "name": "pikionis",
+   "description": "onehublabs.com · LinkedIn · petrospikionis@gmail.com",
+   "language": "Python",
+   "topics": [],
+   "pushed_at": "2026-11-16T13:57:25Z",
+   "url": "https://github.com/pikionis/pikionis"
+  },
+  {
    "name": "feedgenix.com",
    "description": "",
    "language": "PHP",
@@ -17,20 +25,44 @@
    "url": "https://github.com/pikionis/ourbnb"
   },
   {
-   "name": "onehublabs",
-   "description": "",
+   "name": "onehublabs.com",
+   "description": "Personal site — Astro + GSAP.",
    "language": "JavaScript",
    "topics": [],
    "pushed_at": "2026-11-13T11:28:25Z",
-   "url": "https://github.com/pikionis/onehublabs"
+   "url": "https://github.com/pikionis/onehublabs.com"
   },
   {
    "name": "arogikos",
-   "description": "",
+   "description": "arogikos",
    "language": "PHP",
    "topics": [],
    "pushed_at": "2026-11-13T09:18:13Z",
    "url": "https://github.com/pikionis/arogikos"
+  },
+  {
+   "name": "van-life",
+   "description": "Warning: Vite enforces using jsx syntax inside jsx/tsx files, so it will complain about that. Solution: rename .js files to .jsx :)",
+   "language": "JavaScript",
+   "topics": [],
+   "pushed_at": "2025-07-13T18:39:37Z",
+   "url": "https://github.com/pikionis/van-life"
+  },
+  {
+   "name": "practise",
+   "description": "some practise and examples",
+   "language": "Hack",
+   "topics": [],
+   "pushed_at": "2019-10-21T08:37:54Z",
+   "url": "https://github.com/pikionis/practise"
+  },
+  {
+   "name": "survey",
+   "description": "project",
+   "language": "PHP",
+   "topics": [],
+   "pushed_at": "2018-05-08T19:39:40Z",
+   "url": "https://github.com/pikionis/survey"
   }
  ],
  "projects": [

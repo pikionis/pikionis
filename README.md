@@ -22,7 +22,7 @@ pipeline I built translated 800,000+ products into four languages.
 ### What I'm building
 
 <a href="https://github.com/pikionis/feedgenix.com"><img src="./cards/repo-feedgenix.svg" width="49.5%" alt="feedgenix.com: AI feed intelligence for e-commerce catalogues" /></a>
-<a href="https://github.com/pikionis/myweb"><img src="./cards/repo-myweb.svg" width="49.5%" alt="myweb: onehublabs.com, my own site" /></a>
+<a href="https://github.com/pikionis/onehublabs"><img src="./cards/repo-onehublabs.svg" width="49.5%" alt="onehublabs: onehublabs.com, my own site" /></a>
 <a href="https://github.com/pikionis/arogikos"><img src="./cards/repo-arogikos.svg" width="49.5%" alt="arogikos: website for a learning-support centre in Kos" /></a>
 <a href="https://github.com/pikionis/ourbnb"><img src="./cards/repo-ourbnb.svg" width="49.5%" alt="ourbnb: short-term rental management in Kos" /></a>
 

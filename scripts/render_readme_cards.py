@@ -42,7 +42,7 @@ REPOS = [  # file, name, language, colour, description, tags
      "AI feed intelligence for e-commerce catalogues: AI field mapping, a translation engine, "
      "and an AI gateway with routing, retries and a circuit breaker. Mapping evals included.",
      ["Laravel 13", "React 19", "pgvector", "Evals", "32 ADRs"]),
-    ("myweb", "myweb", "Astro · TypeScript", "#1f2020",
+    ("onehublabs", "onehublabs", "Astro · TypeScript", "#1f2020",
      "onehublabs.com, my own site. Astro and GSAP, three languages, a scroll-told career "
      "story, and a GitHub terrain built from my contributions.",
      ["Astro 5", "GSAP", "EN · EL · DE"]),

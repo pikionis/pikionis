@@ -5,31 +5,15 @@
    "description": "onehublabs.com · LinkedIn · petrospikionis@gmail.com",
    "language": "Python",
    "topics": [],
-   "pushed_at": "2026-11-16T13:57:25Z",
+   "pushed_at": "2026-11-17T09:21:05Z",
    "url": "https://github.com/pikionis/pikionis"
   },
   {
-   "name": "feedgenix.com",
-   "description": "",
-   "language": "PHP",
-   "topics": [],
-   "pushed_at": "2026-11-15T21:56:28Z",
-   "url": "https://github.com/pikionis/feedgenix.com"
-  },
-  {
-   "name": "ourbnb",
-   "description": "",
-   "language": "HTML",
-   "topics": [],
-   "pushed_at": "2026-11-14T11:28:49Z",
-   "url": "https://github.com/pikionis/ourbnb"
-  },
-  {
    "name": "onehublabs.com",
-   "description": "Personal site — Astro + GSAP.",
+   "description": "",
    "language": "JavaScript",
    "topics": [],
-   "pushed_at": "2026-11-13T11:28:25Z",
+   "pushed_at": "2026-11-17T09:20:20Z",
    "url": "https://github.com/pikionis/onehublabs.com"
   },
   {
@@ -37,8 +21,32 @@
    "description": "arogikos",
    "language": "PHP",
    "topics": [],
-   "pushed_at": "2026-11-13T09:18:13Z",
+   "pushed_at": "2026-11-16T21:35:56Z",
    "url": "https://github.com/pikionis/arogikos"
+  },
+  {
+   "name": "ourbnb",
+   "description": "",
+   "language": "HTML",
+   "topics": [],
+   "pushed_at": "2026-11-16T21:18:35Z",
+   "url": "https://github.com/pikionis/ourbnb"
+  },
+  {
+   "name": "site-monitor",
+   "description": "The scanner behind the Site Health dashboard. Every Monday, and whenever sites.json changes, a GitHub Action runs Lighthouse the way PageSpeed Insights does, on a phone and on a desktop, for every active site: the home page and up to maxPages pages from its si",
+   "language": "JavaScript",
+   "topics": [],
+   "pushed_at": "2026-11-16T21:17:57Z",
+   "url": "https://github.com/pikionis/site-monitor"
+  },
+  {
+   "name": "feedgenix.com",
+   "description": "",
+   "language": "PHP",
+   "topics": [],
+   "pushed_at": "2026-11-16T21:04:02Z",
+   "url": "https://github.com/pikionis/feedgenix.com"
   },
   {
    "name": "van-life",

@@ -25,7 +25,7 @@ I build AI-backed software for e-commerce and product data: feed pipelines, AI f
 <!-- repos:start -->
 <a href="https://github.com/pikionis/feedgenix.com"><img src="./cards/repo-feedgenix-com.svg" width="49.5%" alt="feedgenix.com: AI feed intelligence for e-commerce catalogues: AI field mapping, a translation engine, and an AI gateway with routing, retries and a circuit breaker. Mapping evals included." /></a>
 <a href="https://github.com/pikionis/ourbnb"><img src="./cards/repo-ourbnb.svg" width="49.5%" alt="ourbnb: ourbnb.gr: short-term rental management in Kos for Airbnb, Booking.com and Expedia. A static site with no build step and no database." /></a>
-<a href="https://github.com/pikionis/onehublabs.com"><img src="./cards/repo-onehublabs-com.svg" width="49.5%" alt="onehublabs.com: Personal site — Astro + GSAP." /></a>
+<a href="https://github.com/pikionis/onehublabs.com"><img src="./cards/repo-onehublabs-com.svg" width="49.5%" alt="onehublabs.com: onehublabs.com, my own site. Astro and GSAP, three languages, a scroll-told career story, and a GitHub terrain built from my contributions." /></a>
 <a href="https://github.com/pikionis/arogikos"><img src="./cards/repo-arogikos.svg" width="49.5%" alt="arogikos: Website for a learning-support centre in Kos. Server-rendered Laravel and Blade, its own design system, self-hosted fonts, GDPR-friendly." /></a>
 <!-- repos:end -->
 

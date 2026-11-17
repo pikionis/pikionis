@@ -12,14 +12,14 @@
   ],
   "featured_count": 4,
   "exclude_repos": ["pikionis", "practise", "survey", "van-life", "diploma", "reach20112018", "real-world-vue"],
-  "site_repo": "pikionis/onehublabs",
+  "site_repo": "pikionis/onehublabs.com",
   "repo_overrides": {
     "feedgenix.com": {
       "language": "PHP · TypeScript",
       "description": "AI feed intelligence for e-commerce catalogues: AI field mapping, a translation engine, and an AI gateway with routing, retries and a circuit breaker. Mapping evals included.",
       "tags": ["Laravel 13", "React 19", "pgvector", "Evals", "32 ADRs"]
     },
-    "onehublabs": {
+    "onehublabs.com": {
       "language": "Astro · TypeScript",
       "description": "onehublabs.com, my own site. Astro and GSAP, three languages, a scroll-told career story, and a GitHub terrain built from my contributions.",
       "tags": ["Astro 5", "GSAP", "EN · EL · DE"]

@@ -11,13 +11,17 @@
 ### What I do
 
 <!-- what:start -->
-I build AI-backed software for e-commerce and product data: feed pipelines, AI field mapping and translation, marketplace integrations, and the web applications around them. Most recently I was the engineer behind supplier feeds and marketplace integrations at DeinDeal, a Swiss marketplace, where the pipeline I built translated 800,000+ products into four languages.
+I'm a full-stack developer and product manager for e-commerce and product data. I take a product from the problem to production: I scope it, build the front end, back end and data pipelines, and run it.
 
-- **AI agents:** agentic workflows that plan, call tools and act: a site monitor whose agent opens pull requests with fixes, AI field mapping that leaves a field empty when it is unsure.
-- **AI systems:** model gateways with routing, retries, a circuit breaker and cost tracking; evals for mapping quality; embeddings with pgvector.
-- **Automation:** scheduled pipelines, scrapers, supplier feed sync over CSV, XML, FTP and SFTP, automated reporting, GitHub Actions.
+Most recently I owned supplier feeds and marketplace integrations at DeinDeal, a Swiss marketplace: managing Channable, onboarding suppliers, building the Galaxus integration, and writing the code and tooling around them.
+
+One example of how I work: product translation was a manual bottleneck outside my role, so I built an AI application that automates the whole process. It has translated 800,000+ products into four languages.
+
+- **Product:** scoping, prioritisation, stakeholder and supplier communication, shipping end to end.
 - **Front end:** React, Astro, TypeScript, Tailwind, GSAP scroll and SVG animation, design systems, three-language sites.
 - **Back end and data:** Laravel, PostgreSQL, queues, category matching, translation memory.
+- **Feeds and automation:** Channable, supplier feed sync over CSV, XML, FTP and SFTP, scheduled pipelines, scrapers, automated reporting, GitHub Actions.
+- **AI systems and agents:** model gateways with routing, retries, a circuit breaker and cost tracking; evals for mapping quality; embeddings with pgvector; agentic workflows, such as a site monitor whose agent opens pull requests with fixes.
 <!-- what:end -->
 
 ### What I'm building

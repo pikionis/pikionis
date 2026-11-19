@@ -30,7 +30,7 @@
       "description": "Website for a learning-support centre in Kos. Server-rendered Laravel and Blade, its own design system, self-hosted fonts, GDPR-friendly.",
       "tags": ["Laravel 13", "Blade", "Tailwind 4"]
     },
-    "ourbnb": {
+    "ourbnb-platform": {
       "language": "Python · Django",
       "description": "Short-term rental platform for Kos: back office, owner portal, Airbnb and Booking.com sync, cleaning teams, WhatsApp guest assistant, owner payouts, AADE declarations.",
       "tags": ["Django 5", "DDD", "PostgreSQL", "WhatsApp API"]

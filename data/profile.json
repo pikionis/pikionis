@@ -31,8 +31,9 @@
       "tags": ["Laravel 13", "Blade", "Tailwind 4"]
     },
     "ourbnb": {
-      "description": "ourbnb.gr: short-term rental management in Kos for Airbnb, Booking.com and Expedia. A static site with no build step and no database.",
-      "tags": ["Static", "No build", "SEO"]
+      "language": "Python · Django",
+      "description": "Short-term rental platform for Kos: back office, owner portal, Airbnb and Booking.com sync, cleaning teams, WhatsApp guest assistant, owner payouts, AADE declarations.",
+      "tags": ["Django 5", "DDD", "PostgreSQL", "WhatsApp API"]
     }
   }
 }

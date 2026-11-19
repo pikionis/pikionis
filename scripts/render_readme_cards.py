@@ -36,7 +36,7 @@ PROFILE = json.loads((ROOT / "data" / "profile.json").read_text())
 WORK = json.loads((ROOT / "data" / "work.json").read_text())
 
 TILES = [  # value, suffix, label (two lines), ground, text, accent
-    ("projects", len(WORK["projects"]) or 9, "", ["Projects designed,", "built and shipped"], COBALT, IVORY, IVORY),
+    ("projects", len(WORK["projects"]) or 9, "", ["Latest projects,", "built and shipped"], COBALT, IVORY, IVORY),
     ("scale", 800, "K+", ["Products processed", "daily with AI"], GROUND, IVORY, "#6f8cf0"),
     ("years", 9, "+", ["Years designing", "and shipping"], IVORY, INK, COBALT),
 ]
@@ -337,13 +337,13 @@ def readme(repos):
         + f': {p["summary"]}' + (f' <sub>{" · ".join(p["stack"])}</sub>' if p["stack"] else "")
         for p in WORK["projects"])
     count = len(WORK["projects"])
-    tiles_alt = f'{count} projects designed, built and shipped'
+    tiles_alt = f'{count} latest projects, built and shipped'
     path = ROOT / "README.md"
     text_ = path.read_text(encoding="utf-8")
     for name, block in (("what", what), ("repos", cards), ("projects", projects)):
         text_ = re.sub(rf"(<!-- {name}:start -->).*?(<!-- {name}:end -->)",
                        lambda m: f"{m[1]}\n{block}\n{m[2]}", text_, flags=re.S)
-    text_ = re.sub(r'alt="\d+ projects designed, built and shipped"', f'alt="{tiles_alt}"', text_)
+    text_ = re.sub(r'alt="\d+ (?:latest )?projects[^"]*shipped"', f'alt="{tiles_alt}"', text_)
     path.write_text(text_, encoding="utf-8")
 
 

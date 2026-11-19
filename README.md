@@ -4,7 +4,7 @@
 
 <img src="./cards/activity.svg" width="100%" alt="Contributions per month, active days, longest streak and busiest day" />
 
-<a href="https://onehublabs.com/projects"><img src="./cards/tile-projects.svg" width="32.5%" alt="9 projects designed, built and shipped" /></a>
+<a href="https://onehublabs.com/projects"><img src="./cards/tile-projects.svg" width="32.5%" alt="9 latest projects, built and shipped" /></a>
 <a href="https://onehublabs.com/projects/deindeal"><img src="./cards/tile-scale.svg" width="32.5%" alt="800K+ products processed daily with AI" /></a>
 <a href="https://onehublabs.com/about"><img src="./cards/tile-years.svg" width="32.5%" alt="9+ years designing and shipping" /></a>
 
@@ -33,7 +33,7 @@ One example of how I work: product translation was a manual bottleneck outside m
 <a href="https://github.com/pikionis/site-monitor"><img src="./cards/repo-site-monitor.svg" width="49.5%" alt="site-monitor: The scanner behind the Site Health dashboard. Every Monday, and whenever sites.json changes, a GitHub Action runs Lighthouse the way PageSpeed Insights does, on a phone and on a desktop, for every active site: the home page and up to maxPages pages from its si" /></a>
 <!-- repos:end -->
 
-### Projects
+### Latest projects
 
 <!-- projects:start -->
 - **[Arogi Kos](https://onehublabs.com/projects/arogi-kos)**: Brand-led website, designed with Claude Design and AI-assisted build. <sub>Claude Design · Laravel · Tailwind CSS</sub>

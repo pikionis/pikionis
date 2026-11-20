@@ -1,6 +1,39 @@
 {
  "repos": [
   {
+   "name": "ourbnb-platform",
+   "description": "OurBnb: the platform behind a short-term rental management business on Kos. Back office, owner portal, calendar sync, cleaning planner, WhatsApp guest assistant, owner payouts, AADE declarations. Django, DDD, hexagonal architecture.",
+   "language": "",
+   "topics": [
+    "ddd",
+    "django",
+    "hexagonal-architecture",
+    "postgresql",
+    "property-management",
+    "python",
+    "short-term-rentals",
+    "whatsapp-api"
+   ],
+   "pushed_at": "2026-11-20T01:15:53Z",
+   "url": "https://github.com/pikionis/ourbnb-platform"
+  },
+  {
+   "name": "site-monitor",
+   "description": "The scanner behind the Site Health dashboard. Every Monday, and whenever sites.json changes, a GitHub Action runs Lighthouse the way PageSpeed Insights does, on a phone and on a desktop, for every active site: the home page and up to maxPages pages from its si",
+   "language": "JavaScript",
+   "topics": [],
+   "pushed_at": "2026-11-20T00:30:34Z",
+   "url": "https://github.com/pikionis/site-monitor"
+  },
+  {
+   "name": "pikionis",
+   "description": "Most recently I owned supplier feeds and marketplace integrations at DeinDeal, a Swiss marketplace: managing Channable, onboarding suppliers, building the Galaxus integration, and writing the code and tooling around them.",
+   "language": "Python",
+   "topics": [],
+   "pushed_at": "2026-11-20T00:25:41Z",
+   "url": "https://github.com/pikionis/pikionis"
+  },
+  {
    "name": "onehublabs.com",
    "description": "",
    "language": "JavaScript",
@@ -23,22 +56,6 @@
    "topics": [],
    "pushed_at": "2026-11-20T00:25:27Z",
    "url": "https://github.com/pikionis/arogikos"
-  },
-  {
-   "name": "pikionis",
-   "description": "Most recently I owned supplier feeds and marketplace integrations at DeinDeal, a Swiss marketplace: managing Channable, onboarding suppliers, building the Galaxus integration, and writing the code and tooling around them.",
-   "language": "Python",
-   "topics": [],
-   "pushed_at": "2026-11-20T00:25:25Z",
-   "url": "https://github.com/pikionis/pikionis"
-  },
-  {
-   "name": "site-monitor",
-   "description": "The scanner behind the Site Health dashboard. Every Monday, and whenever sites.json changes, a GitHub Action runs Lighthouse the way PageSpeed Insights does, on a phone and on a desktop, for every active site: the home page and up to maxPages pages from its si",
-   "language": "JavaScript",
-   "topics": [],
-   "pushed_at": "2026-11-16T21:17:57Z",
-   "url": "https://github.com/pikionis/site-monitor"
   },
   {
    "name": "van-life",

@@ -27,10 +27,10 @@ One example of how I work: product translation was a manual bottleneck outside m
 ### What I'm building
 
 <!-- repos:start -->
+<a href="https://github.com/pikionis/ourbnb-platform"><img src="./cards/repo-ourbnb-platform.svg" width="49.5%" alt="ourbnb-platform: Short-term rental platform for Kos: back office, owner portal, Airbnb and Booking.com sync, cleaning teams, WhatsApp guest assistant, owner payouts, AADE declarations." /></a>
+<a href="https://github.com/pikionis/site-monitor"><img src="./cards/repo-site-monitor.svg" width="49.5%" alt="site-monitor: The scanner behind the Site Health dashboard. Every Monday, and whenever sites.json changes, a GitHub Action runs Lighthouse the way PageSpeed Insights does, on a phone and on a desktop, for every active site: the home page and up to maxPages pages from its si" /></a>
 <a href="https://github.com/pikionis/onehublabs.com"><img src="./cards/repo-onehublabs-com.svg" width="49.5%" alt="onehublabs.com: onehublabs.com, my own site. Astro and GSAP, three languages, a scroll-told career story, and a GitHub terrain built from my contributions." /></a>
 <a href="https://github.com/pikionis/feedgenix.com"><img src="./cards/repo-feedgenix-com.svg" width="49.5%" alt="feedgenix.com: AI feed intelligence for e-commerce catalogues: AI field mapping, a translation engine, and an AI gateway with routing, retries and a circuit breaker. Mapping evals included." /></a>
-<a href="https://github.com/pikionis/arogikos"><img src="./cards/repo-arogikos.svg" width="49.5%" alt="arogikos: Website for a learning-support centre in Kos. Server-rendered Laravel and Blade, its own design system, self-hosted fonts, GDPR-friendly." /></a>
-<a href="https://github.com/pikionis/site-monitor"><img src="./cards/repo-site-monitor.svg" width="49.5%" alt="site-monitor: The scanner behind the Site Health dashboard. Every Monday, and whenever sites.json changes, a GitHub Action runs Lighthouse the way PageSpeed Insights does, on a phone and on a desktop, for every active site: the home page and up to maxPages pages from its si" /></a>
 <!-- repos:end -->
 
 ### Latest projects

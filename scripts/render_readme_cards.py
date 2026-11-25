@@ -35,8 +35,12 @@ LINE_ABOUT = "I turn ideas into working software."
 PROFILE = json.loads((ROOT / "data" / "profile.json").read_text())
 WORK = json.loads((ROOT / "data" / "work.json").read_text())
 
+# The site's projects and the ones data/profile.json adds, in the site's order.
+PROJECTS = sorted([{**p, "url": f"{SITE}/projects/{p['slug']}"} for p in WORK["projects"]]
+                  + PROFILE["extra_projects"], key=lambda p: (p["order"], p["title"]))
+
 TILES = [  # value, suffix, label (two lines), ground, text, accent
-    ("projects", len(WORK["projects"]) or 9, "", ["Latest projects,", "built and shipped"], COBALT, IVORY, IVORY),
+    ("projects", len(PROJECTS), "", ["Latest projects,", "built and shipped"], COBALT, IVORY, IVORY),
     ("scale", 800, "K+", ["Products processed", "daily with AI"], GROUND, IVORY, "#6f8cf0"),
     ("years", 9, "+", ["Years designing", "and shipping"], IVORY, INK, COBALT),
 ]
@@ -45,19 +49,24 @@ LANGUAGE_COLOURS = [COBALT, INK]
 
 
 def featured():
-    """The repos pushed to most recently, minus the ones data/profile.json rules out."""
+    """The repos pushed to most recently, minus the ones data/profile.json rules out, then its card_projects:
+    work whose code is private, so the card opens the project's page on the site."""
     picked = []
     for item in WORK["repos"]:
         if item["name"] in PROFILE["exclude_repos"]:
             continue
         over = PROFILE["repo_overrides"].get(item["name"], {})
         description = over.get("description") or item["description"] or "A new repository. Its description is on the way."
-        tags = over.get("tags") or [t for t in item["topics"]][:4]
+        tags = over.get("tags") or item["topics"] or item.get("languages", [])
         picked.append({"key": re.sub(r"[^a-z0-9]+", "-", item["name"].lower()).strip("-"), "name": item["name"],
                        "language": over.get("language") or item["language"], "description": description,
                        "tags": tags, "url": item["url"]})
+    for p in WORK["projects"]:
+        if p["slug"] in PROFILE["card_projects"]:
+            picked.append({"key": p["slug"], "name": p["title"], "description": p["summary"], "tags": p["stack"],
+                           "language": PROFILE["card_projects"][p["slug"]].get("language", ""),
+                           "url": f"{SITE}/projects/{p['slug']}"})
     return picked[:PROFILE["featured_count"]]
-
 
 
 # ── shared ──────────────────────────────────────────────────────────────────────────────
@@ -115,15 +124,23 @@ def text(x, y, s, size, fill, weight=400, anchor="start", extra=""):
             f'text-anchor="{anchor}" {extra}>{escape(s)}</text>')
 
 
-def wrap(s, width):
+def wrap(s, limit, size, most):
+    """Lines no wider than `limit`; past `most` of them, the last one ends in an ellipsis."""
     lines, line = [], ""
     for word in s.split():
-        if len(line) + len(word) + 1 > width and line:
+        longer = f"{line} {word}".strip()
+        if line and width(longer, size) > limit:
             lines.append(line)
             line = word
         else:
-            line = f"{line} {word}".strip()
-    return lines + [line]
+            line = longer
+    lines.append(line)
+    if len(lines) > most:
+        last = lines[most - 1]
+        while " " in last and width(last + "…", size) > limit:
+            last = last.rsplit(" ", 1)[0]
+        lines = lines[:most - 1] + [last.rstrip(".,:;") + "…"]
+    return lines
 
 
 def width(s, size):
@@ -307,13 +324,15 @@ def repo(item, order):
     colour = LANGUAGE_COLOURS[order % 2]
     w, h = 414, 196
     start = 0.2 + order * 0.14
-    lines = "".join(text(24, 76 + i * 19, s, 13.5, MUTED) for i, s in enumerate(wrap(description, 56)[:4]))
+    lines = "".join(text(24, 76 + i * 19, s, 13.5, MUTED) for i, s in enumerate(wrap(description, w - 48, 13.5, 4)))
     chips, x = "", 24
     for tag in tags:
-        width = len(tag) * 6.7 + 20
-        chips += (f'<rect x="{x}" y="156" width="{width:.0f}" height="22" rx="11" fill="none" stroke="{LINE}"/>'
-                  f'{text(x + width / 2, 171, tag, 11, INK, 500, "middle")}')
-        x += width + 7
+        chip_w = width(tag, 11) + 20
+        if x + chip_w > w - 24:
+            break
+        chips += (f'<rect x="{x:.1f}" y="156" width="{chip_w:.1f}" height="22" rx="11" fill="none" stroke="{LINE}"/>'
+                  f'{text(round(x + chip_w / 2, 1), 171, tag, 11, INK, 500, "middle")}')
+        x += chip_w + 7
     body = f"""
 <g class="rise" {d(start)}>
 <rect x=".5" y=".5" width="{w - 1}" height="{h - 1}" rx="18" fill="{IVORY}" stroke="{LINE}"/>
@@ -333,11 +352,10 @@ def readme(repos):
     cards = "\n".join(f'<a href="{r["url"]}"><img src="./cards/repo-{r["key"]}.svg" width="49.5%" '
                       f'alt="{escape(r["name"] + ": " + r["description"])}" /></a>' for r in repos)
     projects = "\n".join(
-        f'- **[{p["title"]}]({SITE}/projects/{p["slug"]})**' + (f' ({p["badge"]})' if p["badge"] else "")
+        f'- **[{p["title"]}]({p["url"]})**' + (f' ({p["badge"]})' if p["badge"] else "")
         + f': {p["summary"]}' + (f' <sub>{" · ".join(p["stack"])}</sub>' if p["stack"] else "")
-        for p in WORK["projects"])
-    count = len(WORK["projects"])
-    tiles_alt = f'{count} latest projects, built and shipped'
+        for p in PROJECTS)
+    tiles_alt = f'{len(PROJECTS)} latest projects, built and shipped'
     path = ROOT / "README.md"
     text_ = path.read_text(encoding="utf-8")
     for name, block in (("what", what), ("repos", cards), ("projects", projects)):

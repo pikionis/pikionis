@@ -1,11 +1,19 @@
 {
  "repos": [
   {
+   "name": "security-hub",
+   "description": "One private repository whose GitHub Actions security-check all your other repositories and live websites, and tell you when something new turns up: leaked secrets, vulnerable dependencies, misconfigurations, web vulnerabilities, missing WAF protection, attacks",
+   "language": "Python",
+   "topics": [],
+   "pushed_at": "2026-11-25T11:45:05Z",
+   "url": "https://github.com/pikionis/security-hub"
+  },
+  {
    "name": "pikionis",
    "description": "Most recently I owned supplier feeds and marketplace integrations at DeinDeal, a Swiss marketplace: managing Channable, onboarding suppliers, building the Galaxus integration, and writing the code and tooling around them.",
    "language": "Python",
    "topics": [],
-   "pushed_at": "2026-11-23T14:39:19Z",
+   "pushed_at": "2026-11-24T14:52:44Z",
    "url": "https://github.com/pikionis/pikionis"
   },
   {

@@ -1,25 +1,19 @@
 {
  "repos": [
   {
-   "name": "security-hub",
-   "description": "One private repository whose GitHub Actions security-check all your other repositories and live websites, and tell you when something new turns up: leaked secrets, vulnerable dependencies, misconfigurations, web vulnerabilities, missing WAF protection, attacks",
-   "language": "Python",
-   "topics": [],
-   "pushed_at": "2026-11-25T11:45:05Z",
-   "url": "https://github.com/pikionis/security-hub"
-  },
-  {
    "name": "pikionis",
-   "description": "Most recently I owned supplier feeds and marketplace integrations at DeinDeal, a Swiss marketplace: managing Channable, onboarding suppliers, building the Galaxus integration, and writing the code and tooling around them.",
+   "description": "My GitHub profile. Its cards are SVG, drawn by one Python script from my contributions and projects, and refreshed every morning by a GitHub Action.",
    "language": "Python",
+   "languages": [],
    "topics": [],
-   "pushed_at": "2026-11-24T14:52:44Z",
+   "pushed_at": "2026-11-25T16:40:59Z",
    "url": "https://github.com/pikionis/pikionis"
   },
   {
    "name": "ourbnb-platform",
    "description": "OurBnb: the platform behind a short-term rental management business on Kos. Back office, owner portal, calendar sync, cleaning planner, WhatsApp guest assistant, owner payouts, AADE declarations. Django, DDD, hexagonal architecture.",
    "language": "",
+   "languages": [],
    "topics": [
     "ddd",
     "django",
@@ -35,32 +29,50 @@
   },
   {
    "name": "site-monitor",
-   "description": "The scanner behind the Site Health dashboard. Every Monday, and whenever sites.json changes, a GitHub Action runs Lighthouse the way PageSpeed Insights does, on a phone and on a desktop, for every active site: the home page and up to maxPages pages from its si",
+   "description": "Weekly Lighthouse and axe-core scan of every site on my Site Health dashboard, on a phone and on a desktop. An agent reads the results and opens pull requests with fixes.",
    "language": "JavaScript",
+   "languages": [
+    "JavaScript"
+   ],
    "topics": [],
    "pushed_at": "2026-11-20T00:30:34Z",
    "url": "https://github.com/pikionis/site-monitor"
   },
   {
    "name": "onehublabs.com",
-   "description": "",
+   "description": "My own site, onehublabs.com: a scroll-told career story, my services and projects, and a GitHub terrain built from my contributions. Astro, TypeScript and GSAP, in English, Greek and German.",
    "language": "JavaScript",
+   "languages": [
+    "JavaScript",
+    "TypeScript",
+    "Astro"
+   ],
    "topics": [],
    "pushed_at": "2026-11-20T00:25:32Z",
    "url": "https://github.com/pikionis/onehublabs.com"
   },
   {
    "name": "feedgenix.com",
-   "description": "",
+   "description": "FeedGenix: AI feed intelligence for e-commerce catalogues. Connect a product feed, review the AI field mapping, translate it and publish a feed URL for your channels. Private beta. Laravel, React, PostgreSQL.",
    "language": "PHP",
+   "languages": [
+    "PHP",
+    "TypeScript",
+    "Shell"
+   ],
    "topics": [],
    "pushed_at": "2026-11-20T00:25:29Z",
    "url": "https://github.com/pikionis/feedgenix.com"
   },
   {
    "name": "arogikos",
-   "description": "arogikos",
+   "description": "Website of Arogi, a centre for learning support, counselling and career guidance on Kos. Server-rendered Laravel and Blade, Tailwind CSS, self-hosted fonts.",
    "language": "PHP",
+   "languages": [
+    "PHP",
+    "Blade",
+    "CSS"
+   ],
    "topics": [],
    "pushed_at": "2026-11-20T00:25:27Z",
    "url": "https://github.com/pikionis/arogikos"
@@ -69,6 +81,7 @@
    "name": "van-life",
    "description": "Warning: Vite enforces using jsx syntax inside jsx/tsx files, so it will complain about that. Solution: rename .js files to .jsx :)",
    "language": "JavaScript",
+   "languages": [],
    "topics": [],
    "pushed_at": "2025-07-13T18:39:37Z",
    "url": "https://github.com/pikionis/van-life"
@@ -77,6 +90,7 @@
    "name": "practise",
    "description": "some practise and examples",
    "language": "Hack",
+   "languages": [],
    "topics": [],
    "pushed_at": "2019-10-21T08:37:54Z",
    "url": "https://github.com/pikionis/practise"
@@ -85,6 +99,7 @@
    "name": "survey",
    "description": "project",
    "language": "PHP",
+   "languages": [],
    "topics": [],
    "pushed_at": "2018-05-08T19:39:40Z",
    "url": "https://github.com/pikionis/survey"

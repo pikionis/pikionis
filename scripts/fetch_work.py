@@ -54,8 +54,15 @@ def repos():
                 description = first_paragraph(base64.b64decode(readme["content"]).decode("utf-8", "replace"))
             except Exception:  # noqa: BLE001 - no README is fine
                 pass
+        languages = []
+        if repo["name"] not in PROFILE["exclude_repos"]:
+            try:
+                languages = list(get(f"/repos/{USER}/{repo['name']}/languages"))[:3]  # the most used first
+            except Exception:  # noqa: BLE001 - a card without them is fine
+                pass
         found.append({"name": repo["name"], "description": description, "language": repo["language"] or "",
-                      "topics": repo.get("topics", []), "pushed_at": repo["pushed_at"], "url": repo["html_url"]})
+                      "languages": languages, "topics": repo.get("topics", []), "pushed_at": repo["pushed_at"],
+                      "url": repo["html_url"]})
     return found
 
 

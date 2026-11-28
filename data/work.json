@@ -1,6 +1,15 @@
 {
  "repos": [
   {
+   "name": "pikionis",
+   "description": "My GitHub profile. Its cards are SVG, drawn by one Python script from my contributions and projects, and refreshed every morning by a GitHub Action.",
+   "language": "Python",
+   "languages": [],
+   "topics": [],
+   "pushed_at": "2026-11-27T13:52:23Z",
+   "url": "https://github.com/pikionis/pikionis"
+  },
+  {
    "name": "Weather-Quick",
    "description": "",
    "language": "TypeScript",
@@ -12,15 +21,6 @@
    "topics": [],
    "pushed_at": "2026-11-27T00:49:05Z",
    "url": "https://github.com/pikionis/Weather-Quick"
-  },
-  {
-   "name": "pikionis",
-   "description": "My GitHub profile. Its cards are SVG, drawn by one Python script from my contributions and projects, and refreshed every morning by a GitHub Action.",
-   "language": "Python",
-   "languages": [],
-   "topics": [],
-   "pushed_at": "2026-11-26T13:54:42Z",
-   "url": "https://github.com/pikionis/pikionis"
   },
   {
    "name": "ourbnb-platform",
